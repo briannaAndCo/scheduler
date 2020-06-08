@@ -144,20 +144,6 @@ public class SwiftSchedulerPlugin: NSObject, FlutterPlugin {
             }
         }
     }
-
-    private func notify(val: String) {
-        let content = UNMutableNotificationContent()
-        content.title = "LOG"
-        content.subtitle = val
-        content.sound = UNNotificationSound.default
-
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-
-        // add our notification request
-        UNUserNotificationCenter.current().add(request)
-    }
 }
 
 @available(iOS 10.0, *)
