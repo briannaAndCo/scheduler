@@ -7,11 +7,6 @@ class Scheduler {
   static const MethodChannel _channel =
       const MethodChannel('scheduler');
 
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
-
   static Future<void> scheduleNotification(
       TimeOfDay alarmTime,
       String title,
@@ -34,7 +29,7 @@ class Scheduler {
       ]);
 
   static Future<void> cancelNotification() async =>
-      await _channel.invokeMethod('SchedulerPlugin.cancelNotification');
+      await _channel.invokeMethod('SchedulerPlugin.cancelNotification', <dynamic>[]);
 
   static Future<void> rescheduleCurrentNotification(TimeOfDay alarmTime) async =>
       await _channel.invokeMethod('SchedulerPlugin.rescheduleCurrentNotification',

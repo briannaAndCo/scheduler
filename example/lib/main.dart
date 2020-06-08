@@ -49,7 +49,9 @@ class _MyAppState extends State<MyApp> {
                     Center(
                       child: RaisedButton(
                         child: const Text('Cancel Notification'),
-                        onPressed: Scheduler.cancelNotification,
+                        onPressed: () {
+                          Scheduler.cancelNotification();
+                        },
                       ),
                     ),
                     Center(

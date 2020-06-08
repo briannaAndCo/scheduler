@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - scheduler (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - scheduler (from `.symlinks/plugins/scheduler/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  scheduler:
+    :path: ".symlinks/plugins/scheduler/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  scheduler: 9501b99a13ec7469ca694c76bd80f5a611b0896f
+
+PODFILE CHECKSUM: f45d293502bdcca725aca7bc62af43ad173e1292
+
+COCOAPODS: 1.9.1

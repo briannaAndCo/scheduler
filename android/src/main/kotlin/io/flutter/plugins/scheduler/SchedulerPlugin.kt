@@ -21,10 +21,6 @@ import io.flutter.plugins.scheduler.Notification
 
 /** SchedulerPlugin */
 public class SchedulerPlugin(): FlutterPlugin, MethodCallHandler {
-  /// The MethodChannel that will the communication between Flutter and native Android
-  ///
-  /// This local reference serves to register the plugin with the Flutter Engine and unregister it
-  /// when the Flutter Engine is detached from the Activity
   private lateinit var channel : MethodChannel
   private lateinit var mContext : Context
 
@@ -178,8 +174,7 @@ public class SchedulerPlugin(): FlutterPlugin, MethodCallHandler {
 
       val times = mutableListOf<Calendar>(calendar)
 
-      // for (minute in 5 until 30 step 5) {
-      for(minute in 1 until 6) {
+      for (minute in 5 until 30 step 5) {
         times.add(
                 (calendar.clone() as Calendar)
                         .apply{add(Calendar.MINUTE, minute)}
